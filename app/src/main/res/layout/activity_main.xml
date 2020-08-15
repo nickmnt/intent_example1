@@ -26,5 +26,6 @@
         android:text="@string/send_msg"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        android:onClick="onSendMessage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
