@@ -15,10 +15,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onSendMessage(view: View) {
-        //In java: Intent intent = new Intent(this, ReceiveMessageActivity.class);
-
-        val intent = Intent(this, ReceiveMessageActivity::class.java)
-        intent.putExtra("message", msgBox.text.toString())
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.setType("text/plain")
+        intent.putExtra(Intent.EXTRA_TEXT, msgBox.text.toString())
         startActivity(intent)
     }
 }
