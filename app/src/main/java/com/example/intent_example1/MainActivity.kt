@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,8 +18,7 @@ class MainActivity : AppCompatActivity() {
         //In java: Intent intent = new Intent(this, ReceiveMessageActivity.class);
 
         val intent = Intent(this, ReceiveMessageActivity::class.java)
-        val msgBox = findViewById<EditText>(R.id.msgBox)
-        intent.putExtra("message", msgBox.text)
+        intent.putExtra("message", msgBox.text.toString())
         startActivity(intent)
     }
 }
